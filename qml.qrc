@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TextFieldBase.qml</file>
+        <file>DataBaseOptionsReceiver.qml</file>
+        <file>TableListView.qml</file>
+        <file>TableListDelegate.qml</file>
+    </qresource>
+</RCC>
