@@ -1,8 +1,7 @@
 #pragma once
-#include <QObject>
 #include <QSqlDatabase>
+#include <QSqlTableModel>
 #include <QtDebug>
-#include <QQmlEngine>
 
 class DataBaseConnectionInitializer : public QObject
 {

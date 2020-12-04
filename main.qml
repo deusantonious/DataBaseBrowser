@@ -22,6 +22,24 @@ ApplicationWindow {
 
         anchors.fill: parent
         active: false
+
+        Connections {
+            target: tableListViewLoader.item
+            function onTableSelected(tableName) {
+                selectedTableViewLoader.active = true;
+                tableListViewLoader.active = false;
+                selectedTableViewLoader.item.selectTable(tableName);
+            }
+        }
+    }
+
+    Loader {
+        id: selectedTableViewLoader
+
+        source: "SelectedTableView.qml"
+
+        anchors.fill: parent
+        active: false
     }
 
     Loader {

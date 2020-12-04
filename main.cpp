@@ -3,6 +3,7 @@
 #include <QQuickStyle>
 #include "tablelistmodel.h"
 #include "databaseConnectioninitializer.h"
+#include "selectedtablemodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,12 +14,15 @@ int main(int argc, char *argv[])
     QQuickStyle::setStyle("Material");
 
     qmlRegisterType<TableListModel>("TableListModel", 1, 0, "TableListModel");
-    qmlRegisterSingletonType<DataBaseConnectionInitializer>("Qt.example.qobjectSingleton", 1, 0, "MyApi", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
+    qmlRegisterType<SelectedTableModel>("SelectedTableModel", 1, 0, "SelectedTableModel");
+
+    qmlRegisterSingletonType<DataBaseConnectionInitializer>("DataBaseConnectionInitializer", 1, 0, "DataBaseConnectionInitializer",
+                                                            [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject * {
         Q_UNUSED(engine)
         Q_UNUSED(scriptEngine)
 
-        DataBaseConnectionInitializer *example = new DataBaseConnectionInitializer();
-        return example;
+        DataBaseConnectionInitializer *ptr = new DataBaseConnectionInitializer();
+        return ptr;
     });
 
     QQmlApplicationEngine engine;

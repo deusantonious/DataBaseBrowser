@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
         databaseConnectioninitializer.cpp \
         main.cpp \
+        selectedtablemodel.cpp \
         tablelistmodel.cpp
 
 RESOURCES += qml.qrc \
@@ -31,4 +32,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     databaseConnectioninitializer.h \
+    selectedtablemodel.h \
     tablelistmodel.h

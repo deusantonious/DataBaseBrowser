@@ -5,5 +5,7 @@
         <file>DataBaseOptionsReceiver.qml</file>
         <file>TableListView.qml</file>
         <file>TableListDelegate.qml</file>
+        <file>SelectedTableView.qml</file>
+        <file>TableDataDelegate.qml</file>
     </qresource>
 </RCC>

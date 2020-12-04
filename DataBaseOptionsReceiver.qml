@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.15
-import Qt.example.qobjectSingleton 1.0
+import DataBaseConnectionInitializer 1.0
 
 Item {
     id: root
@@ -67,7 +67,7 @@ Item {
             Layout.preferredHeight: 40
 
             onClicked: {
-                if (MyApi.initialize("postgres","postgres","monopoli@2020","localhost",5432)) {
+                if (DataBaseConnectionInitializer.initialize("postgres","postgres","monopoli@2020","localhost",5432)) {
                     //if (MyApi.initialize(dataBaseName.text,userName.text,password.text,hostName.text,port.text)) {
                     root.mySignal();
                 }
