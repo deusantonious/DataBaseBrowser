@@ -16,10 +16,11 @@ Rectangle {
         anchors.centerIn: parent
 
         text: display
+
         font.bold: isHeader
+        font.pointSize: isHeader ? 18 : 12
 
         color: isHeader ? Material.secondaryTextColor : Material.primaryTextColor
         enabled: false
-
     }
 }

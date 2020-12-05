@@ -12,7 +12,7 @@ ApplicationWindow {
     title: qsTr("Hello World")
 
 
-    Material.theme: Material.Dark
+    //Material.theme: Material.Dark
     Material.accent: Material.Teal
 
     Loader {
